@@ -1,33 +1,30 @@
 interface Relogio {
     void setAlarme(Instant instant);
     float lerTermometro();
-    void tuneInToRandomRadio();
+    void sincronizarRadio();
 }
 class relogioAntigo implements Relogio {
     @Override
     public void setAlarme(Instant instant) {
-        // set the alarm
     }
     @Override
     public float lerTermometro() {
-        throw new UnsupportedOperationException("ancient Relogio does not have thermometer");
+        throw new Exception();
     }
     @Override
-    public void tuneInToRandomRadio() {
-        // tune in to one of the stations
+    public void sincronizarRadio(); {
     }
 }
-class relogioModerno implements Relogio {
+class relogioModerno implements Relogio {sincronizarRadio
     @Override
     public void setAlarme(Instant instant) {
-        // set the alarm
     }
     @Override
     public float lerTermometro() {
-        return 5; // return some value
+        return 5; 
     }
     @Override
-    public void tuneInToRandomRadio() {
-        throw new UnsupportedOperationException("modern Relogio cannot play radio");
+    public void sincronizarRadio(); {
+        throw new Exception();
     }
 }
