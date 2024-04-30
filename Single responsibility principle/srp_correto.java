@@ -14,7 +14,7 @@ public class srp_correto {
     return preco;
   }
 
-  public double getTaxRate() {
+  public double getTaxa() {
     return taxa;
   }
 }
@@ -22,6 +22,6 @@ public class srp_correto {
 public class calculoTaxa {
 
   public static double calcularTaxa(srp_erado product) {
-    return product.getpreco() * product.getTaxRate();
+    return product.getpreco() * product.getTaxa();
   }
 }
