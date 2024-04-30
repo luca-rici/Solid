@@ -56,7 +56,7 @@ public class calculoTaxa {
 
 # Interface Segregation Principle
 
-### É o princípio de design em programação orientada a objetos que afirma que nenhum cliente deve ser forçado a depender de interfaces que não usa.
+### É o princípio de design que afirma que nenhum cliente deve ser forçado a depender de interfaces que não usa.
 
 Portanto, uma única interface deve ser dividida em várias interfaces menores e bem definidas. 
 
