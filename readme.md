@@ -132,7 +132,7 @@ No código erado, a classe LoginService depende diretamente da classe AuthServic
 ~~~java
 public class LoginService {
 
-    private AuthService authService; // Dependência direta do serviço de autenticação
+    private AuthService authService;
 
     public User login(String username, String password) {
         User user = authService.authenticate(username, password);
@@ -151,14 +151,13 @@ public interface AuthService {
 
 public class LoginService {
 
-    private AuthService authService; // Dependência de abstração (interface)
+    private AuthService authService;
     public LoginService(AuthService authService) {
         this.authService = authService;
     }
 
     public User login(String username, String password) {
         User user = authService.authenticate(username, password);
-        // Processa o login do usuário autenticado
         return user;
     }
 }
