@@ -41,7 +41,7 @@ public class srp_correto {
     return preco;
   }
 
-  public double getTaxRate() {
+  public double getTaxa() {
     return taxa;
   }
 }
@@ -49,7 +49,7 @@ public class srp_correto {
 public class calculoTaxa {
 
   public static double calcularTaxa(srp_erado product) {
-    return product.getpreco() * product.getTaxRate();
+    return product.getpreco() * product.getTaxa();
   }
 }
 ~~~
@@ -73,7 +73,7 @@ class relogioAntigo implements Relogio {
     }
     @Override
     public float lerTermometro() {
-        throw new operacaoNaoSuportada("Relogio antigo não tem termometro");
+        throw new Exception();
     }
     @Override
     public void sincronizarRadio() {
@@ -88,7 +88,7 @@ class relogioModerno implements Relogio {
     }
     @Override
     public void sincronizarRadio() {
-        throw new operacaoNaoSuportada("Relogio moderno não suporta Radio");
+        throw new Exception();
     }
 }
 ~~~
@@ -136,7 +136,6 @@ public class LoginService {
 
     public User login(String username, String password) {
         User user = authService.authenticate(username, password);
-        // Processa o login do usuário autenticado
         return user;
     }
 }
