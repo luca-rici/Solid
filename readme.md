@@ -93,7 +93,7 @@ class relogioModerno implements Relogio {
 }
 ~~~
 
-No código correto,o resultado é que nem todas as classes de relógio precisam suportar rádio ou termômetro.
+No código correto,o resultado é que nem todas as classes de relógio precisam suportar rádio ou termômetro. Mas caso queira vai ter uma interface para ter acesso a essa funcionalidade.
 
 ~~~java
 interface Termometro {
@@ -125,11 +125,9 @@ class relogioMOderno implements Alarme, Termometro {
 
 # Dependecy inversion principle
 
-### Ele prega que módulos de alto nível não devem depender de módulos de baixo nível; ambos devem depender de abstrações.
+### Diz que os módulos de alto nível não devem depender de módulos de baixo nível, ambos devem depender de abstrações.
 
-Imagine um sistema que utiliza um serviço de autenticação de terceiros para validar usuários. O serviço retorna um objeto User com informações sobre o usuário autenticado.
-
-No código eraddo, a classe LoginService depende diretamente da classe AuthService. Isso significa que qualquer alteração na implementação do AuthService impacta diretamente o LoginService, tornando o código rígido e difícil de testar.
+No código erado, a classe LoginService depende diretamente da classe AuthService. Isso significa que qualquer alteração na implementação do AuthService impacta diretamente o LoginService, tornando o código rígido e difícil de testar.
 
 ~~~java
 public class LoginService {
